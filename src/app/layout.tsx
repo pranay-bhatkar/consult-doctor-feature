@@ -18,7 +18,7 @@ export const metadata = {
   openGraph: {
     title: "Consult a Doctor",
     description: "Book appointments with verified specialists online.",
-    url: "https://your-domain.com",
+    url: "https://consult-doctor-feature.vercel.app/",
     siteName: "Consult a Doctor",
     images: [
       {
