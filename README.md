@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🩺 Consult a Doctor – Online Booking App
 
-## Getting Started
+A responsive and SEO-optimized web application built with **Next.js 14 App Router** and **Tailwind CSS**, designed to simulate an Apollo-like online doctor consultation platform.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+- 🧑‍⚕️ Browse verified doctor profiles
+- 📅 Book appointments with available slots
+- ✅ Instant success/error UI feedback
+- 📱 Mobile-friendly responsive design
+- 🔍 SEO-optimized (metadata, sitemap, robots.txt, structured data)
+- 🌐 Deployed on Vercel
+
+---
+
+## 🖥️ Tech Stack
+
+- [Next.js (App Router)](https://nextjs.org/docs/app)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel Hosting](https://vercel.com/)
+- [next-sitemap](https://github.com/iamvishnusankar/next-sitemap) for SEO
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/pranay-bhatkar/consult-doctor-feature.git
+cd consult-doctor
+npm install
+```
+
+---
+
+## ▶️ Running Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser at [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Build & Deploy
 
-## Learn More
+To build for production:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To deploy on **Vercel**, push the code to GitHub and import the repo on [vercel.com](https://vercel.com/).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
+<!-- 
+## 🔍 SEO Setup
 
-## Deploy on Vercel
+### 1. `next-sitemap`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install next-sitemap
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm run postbuild
+```
+
+> This generates `/sitemap.xml` and `/robots.txt` in the `public` folder automatically.
+
+### 2. Metadata & Open Graph
+
+Set up in `layout.tsx` and dynamic pages via the `metadata` API + `<Head />`.
+
+### 3. Structured Data
+
+Implemented using JSON-LD in doctor profile pages for Google Rich Results.
+
+--- -->
+
+## 📁 Project Structure
+
+```
+src/
+  app/
+    page.tsx              # Home page
+    layout.tsx            # Global layout with metadata
+    consult/
+      page.tsx            # Doctor list page
+      [id]/page.tsx       # Individual doctor profile & booking
+  components/
+    DoctorCard.tsx        # Doctor profile UI card
+
+styles/
+  globals.css             # Tailwind base and custom styles
+```
+
+---
+
+## ✅ Live Demo
+
+🌐 [https://your-vercel-project.vercel.app](https://your-vercel-project.vercel.app)
+
+---
+
+## 📌 Todo / Future Enhancements
+
+- 🔐 Add authentication with Clerk/Auth.js
+- 💾 Connect to a database (MongoDB, PostgreSQL)
+- 📆 Store appointment data
+- 🛠 Admin dashboard to manage doctors & bookings
+- 📹 Video consultation with Zoom/Agora API
+
+---
+
+## 📄 License
+
+MIT © [Pranay Bhatkar](https://github.com/pranay-bhatkar)
